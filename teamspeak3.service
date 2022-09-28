@@ -1,0 +1,14 @@
+[Unit]
+Description=TeamSpeak 3 Server
+After=network.target
+
+[Service]
+WorkingDirectory=/home/teamspeak/teamspeak3-server_linux_x86/
+User=teamspeak
+ExecStart=/home/teamspeak/teamspeak3-server_linux_x86/ts3server
+Restart=always
+RestartSec=15
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
